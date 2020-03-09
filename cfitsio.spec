@@ -1,6 +1,6 @@
 Name:              cfitsio
 Version:           3.450
-Release:           4
+Release:           5
 Summary:           Library for manipulating FITS data files
 License:           MIT
 URL:               http://heasarc.gsfc.nasa.gov/fitsio/
@@ -117,8 +117,11 @@ chmod 755 %{buildroot}%{_bindir}/f{,un}pack
 %{_bindir}/funpack
 
 %changelog
-* Wed Mar 04 2020 yangjian<yangjian79@huawei.com> - 3.450-3
-- Package init
+* Mon Mar 09 2020 yangjian<yangjian79@huawei.com> - 3.450-5
+- Fix changelog  problem
 
 * Mon Mar 09 2020 yangjian<yangjian79@huawei.com> - 3.450-4
 - To fix files problem
+
+* Wed Mar 04 2020 yangjian<yangjian79@huawei.com> - 3.450-3
+- Package init
