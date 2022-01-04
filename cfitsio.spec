@@ -1,6 +1,6 @@
 Name:              cfitsio
 Version:           3.450
-Release:           5
+Release:           6
 Summary:           Library for manipulating FITS data files
 License:           MIT
 URL:               http://heasarc.gsfc.nasa.gov/fitsio/
@@ -10,6 +10,9 @@ Patch0000:         cfitsio-zlib.patch
 Patch0001:         cfitsio-noversioncheck.patch
 Patch0002:         cfitsio-pkgconfig.patch
 Patch0003:         cfitsio-ldflags.patch
+%ifarch riscv64
+Patch0004:         add_riscv_support.patch
+%endif
 
 BuildRequires:     gcc-gfortran zlib-devel bzip2-devel
 Requires(post):    /sbin/ldconfig
@@ -117,6 +120,9 @@ chmod 755 %{buildroot}%{_bindir}/f{,un}pack
 %{_bindir}/funpack
 
 %changelog
+* Tue Jan 04 2021 lvxiaoqian<xiaoqian@nj.iscas.ac.cn> - 3.450-6
+- add riscv support
+
 * Mon Mar 09 2020 yangjian<yangjian79@huawei.com> - 3.450-5
 - Fix changelog  problem
 
